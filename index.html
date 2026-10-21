@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button type="button" onclick="exportarJson()"> Exportar JSON</button>
+    </header>
+
+
+
+<form id="formArtigo">
+    <label for="titulo">Título do artigo:</label>
+    <input
+        type="text"
+        id="titulo"
+        required
+        placeholder="Digite o título do artigo"
+    >
+
+    <label for="img">Imagem do artigo:</label>
+    <input
+        type="file"
+        id="img"
+        accept="image/png, image/jpeg, image/webp"
+        required
+    >
+
+    <label for="resumo">Resumo do artigo:</label>
+    <textarea
+        id="resumo"
+        rows="3"
+        required
+        placeholder="Digite um resumo para o card"
+    ></textarea>
+
+    <label for="texto">Texto completo:</label>
+    <textarea
+        id="texto"
+        rows="8"
+        required
+        placeholder="Digite o conteúdo completo do artigo"
+    ></textarea>
+
+    <button type="submit" id="salvar">
+        Cadastrar artigo
+    </button>
+</form>
+
+<button type="button" onclick="exportarJson()">
+    Exportar JSON
+</button>
+
+<div id="listaDeArtigos"></div>
+
+    
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
