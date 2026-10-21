@@ -191,6 +191,12 @@ button:focus-visible {
     white-space: pre-wrap;
 }
 
+.artigo .texto-artigo {
+    padding-top: 14px;
+    border-top: 1px solid #e1e7ec;
+    color: #263238;
+}
+
 
 /* Botões ficam na parte inferior do card */
 
@@ -200,7 +206,6 @@ button:focus-visible {
 }
 
 .artigo button:first-of-type {
-    margin-top: auto;
     background-color: #287a59;
     color: white;
 }

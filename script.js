@@ -186,13 +186,10 @@ function renderizarArtigos() {
     const resumo = document.createElement("p");
     resumo.textContent = artigo.resumo;
 
-    // Botão para ler o artigo.
-    const botaoLer = document.createElement("button");
-    botaoLer.textContent = "Ler artigo";
-
-    botaoLer.addEventListener("click", function () {
-      visualizarArtigo(indice);
-    });
+    // Texto completo do artigo.
+    const texto = document.createElement("p");
+    texto.className = "texto-artigo";
+    texto.textContent = artigo.texto;
 
     // Botão para editar o artigo.
     const botaoEditar = document.createElement("button");
@@ -214,28 +211,13 @@ function renderizarArtigos() {
     card.appendChild(imagem);
     card.appendChild(titulo);
     card.appendChild(resumo);
-    card.appendChild(botaoLer);
+    card.appendChild(texto);
     card.appendChild(botaoEditar);
     card.appendChild(botaoExcluir);
 
     // Adiciona o card à página.
     lista.appendChild(card);
   }
-}
-
-// ========================== VISUALIZAR ARTIGO ==========================
-
-function visualizarArtigo(indice) {
-  const artigo = artigos[indice];
-
-  alert(
-    "Título: " +
-      artigo.titulo +
-      "\n\nResumo: " +
-      artigo.resumo +
-      "\n\nTexto: " +
-      artigo.texto,
-  );
 }
 
 // ========================== EXCLUIR (DELETE) ==========================
